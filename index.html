@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peptide Calculator – DNZtech</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #a78bf5, #5b4fcf);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        header .icon span {
+            color: white;
+            font-size: 36px;
+            line-height: 1;
+        }
+
+        header h1 { font-size: 28px; font-weight: 700; }
+        header p  { color: #6e6e73; font-size: 15px; margin-top: 4px; }
+
+        nav {
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            padding: 14px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1a73e8;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover { text-decoration: underline; }
+
+        .container {
+            max-width: 720px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1d1d1f;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 20px 0 8px;
+            color: #1d1d1f;
+        }
+
+        p  { color: #3d3d3f; font-size: 15px; margin-bottom: 12px; }
+        ul { padding-left: 20px; color: #3d3d3f; font-size: 15px; }
+        li { margin-bottom: 6px; }
+
+        .badge {
+            display: inline-block;
+            background: #ede8fd;
+            color: #5b4fcf;
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .contact-card {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-top: 12px;
+        }
+
+        .contact-card a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: #6e6e73;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="icon"><span>💉</span></div>
+    <h1>Peptide Calculator</h1>
+    <p>von DNZtech</p>
+</header>
+
+<nav>
+    <a href="#datenschutz">Datenschutz</a>
+    <a href="#support">Support</a>
+    <a href="#nutzungsbedingungen">Nutzungsbedingungen</a>
+</nav>
+
+<div class="container">
+
+    <!-- ── DATENSCHUTZ ───────────────────────────────────────────── -->
+    <section id="datenschutz">
+        <span class="badge">Datenschutzerklärung</span>
+        <h2>Datenschutz</h2>
+        <p>Zuletzt aktualisiert: April 2026</p>
+
+        <p>Der Schutz deiner persönlichen Daten ist uns wichtig. Diese Datenschutzerklärung erläutert, wie die App <strong>Peptide Calculator</strong> mit deinen Daten umgeht.</p>
+
+        <h3>Welche Daten werden erfasst?</h3>
+        <p><strong>Keine.</strong> Peptide Calculator erfasst, speichert oder überträgt keinerlei persönliche Daten. Die App funktioniert vollständig offline und ohne Registrierung.</p>
+
+        <h3>Lokale Daten</h3>
+        <p>Alle in der App gespeicherten Inhalte – wie Dosierungen, Erinnerungen und Einnahmeprotokolle – werden ausschließlich lokal auf deinem Gerät gespeichert und verlassen dieses nie.</p>
+
+        <h3>Benachrichtigungen</h3>
+        <p>Falls du Erinnerungen aktivierst, nutzt die App ausschließlich die lokalen Push-Benachrichtigungen deines Gerätes (via Apple UNUserNotificationCenter). Es werden dabei keine Daten an externe Dienste übermittelt.</p>
+
+        <h3>Drittanbieter</h3>
+        <p>Peptide Calculator verwendet keine Analyse-Tools, Werbenetzwerke oder sonstige Drittanbieter-Dienste.</p>
+
+        <h3>Kinder</h3>
+        <p>Da keinerlei Daten erfasst oder übertragen werden, bestehen keine besonderen Risiken für Minderjährige.</p>
+
+        <h3>Änderungen</h3>
+        <p>Sollte sich diese Datenschutzerklärung ändern, wird die aktualisierte Version auf dieser Seite veröffentlicht.</p>
+    </section>
+
+    <!-- ── SUPPORT ───────────────────────────────────────────────── -->
+    <section id="support">
+        <span class="badge">Support</span>
+        <h2>Hilfe &amp; Kontakt</h2>
+
+        <p>Hast du eine Frage, einen Fehler entdeckt oder einen Verbesserungsvorschlag? Ich freue mich über deine Nachricht.</p>
+
+        <h3>Häufige Fragen</h3>
+        <ul>
+            <li><strong>Wie berechne ich eine Dosierung?</strong><br>
+                Gib im Reiter „Rechner" die Peptidmenge (mg), die Wassermenge (mL) und die gewünschte Dosis (mcg) ein. Das Ergebnis – Volumen und Einheiten – wird automatisch berechnet.</li>
+            <li><strong>Was bedeutet die Spritzenvisualisierung?</strong><br>
+                Die Grafik zeigt dir, bis zu welchem Strich du die gewählte Insulinspritze (0,3 / 0,5 / 1,0 mL) aufziehen musst.</li>
+            <li><strong>Wie speichere ich eine Dosierung?</strong><br>
+                Tippe nach der Berechnung auf „Speichern". Du kannst der Dosierung optional einen Namen geben. Sie erscheint dann unter „Meine Dosierungen".</li>
+            <li><strong>Wie stelle ich eine Erinnerung ein?</strong><br>
+                Tippe in „Meine Dosierungen" auf das Glockensymbol neben einer Dosierung. Du kannst eine einmalige oder wöchentlich wiederkehrende Erinnerung festlegen.</li>
+            <li><strong>Was ist „Eingenommen"?</strong><br>
+                Mit dem Häkchen-Symbol kannst du eine Dosierung als eingenommen markieren. Der Eintrag erscheint dann im Kalender als grüner Punkt.</li>
+            <li><strong>Wie ändere ich die Akzentfarbe?</strong><br>
+                Öffne die Einstellungen (Zahnrad-Symbol) und wähle unter „Akzentfarbe" eine der Vorschlagsfarben.</li>
+        </ul>
+
+        <h3>Kontakt</h3>
+        <div class="contact-card">
+            <p><strong>DNZtech</strong></p>
+            <p>E-Mail: <a href="mailto:numlyapp@icloud.com">numlyapp@icloud.com</a></p>
+        </div>
+    </section>
+
+    <!-- ── NUTZUNGSBEDINGUNGEN ───────────────────────────────────── -->
+    <section id="nutzungsbedingungen">
+        <span class="badge">Nutzungsbedingungen</span>
+        <h2>Nutzungsbedingungen</h2>
+
+        <p>Durch die Nutzung von <strong>Peptide Calculator</strong> stimmst du den folgenden Bedingungen zu.</p>
+
+        <h3>Zweck der App</h3>
+        <p>Peptide Calculator dient ausschließlich zu Forschungs- und Informationszwecken. Die App stellt keine medizinische Beratung, Diagnose oder Behandlungsempfehlung dar. Die Nutzung erfolgt auf eigene Verantwortung.</p>
+
+        <h3>Lizenz</h3>
+        <p>Peptide Calculator wird dir für den persönlichen, nicht-kommerziellen Gebrauch zur Verfügung gestellt. Es ist nicht gestattet, die App zu kopieren, zu verändern oder weiterzuverkaufen.</p>
+
+        <h3>Haftungsausschluss</h3>
+        <p>Die App wird ohne jegliche ausdrückliche oder implizite Gewährleistung bereitgestellt. Für Rechenfehler, Datenverlust oder gesundheitliche Schäden, die durch die Nutzung der App entstehen, übernehmen wir keine Haftung. Bitte überprüfe wichtige Berechnungen immer eigenständig und konsultiere eine Fachperson.</p>
+
+        <h3>Änderungen</h3>
+        <p>Wir behalten uns vor, diese Bedingungen jederzeit zu aktualisieren. Die aktuelle Version ist stets auf dieser Seite abrufbar.</p>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 DNZtech · Peptide Calculator · Alle Rechte vorbehalten</p>
+</footer>
+
+</body>
+</html>
